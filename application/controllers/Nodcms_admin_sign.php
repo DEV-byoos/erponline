@@ -19,7 +19,6 @@ class Nodcms_admin_sign extends MY_Controller {
         $banner = @reset($this->NodCMS_general_admin_model->get_website_info());
         $_SESSION['language'] = $language = $this->NodCMS_general_admin_model->get_language_detail($banner["language_id"]);
         $this->lang->load($language["code"], $language["language_name"]);
-        $this->load->model('model_auth');
     }
 
     function index()

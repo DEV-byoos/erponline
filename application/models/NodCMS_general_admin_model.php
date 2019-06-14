@@ -345,7 +345,6 @@ class NodCMS_general_admin_model extends CI_Model
         {
             $this->db->where('user_id',$id);
             $this->db->update('users',$data);
-
 			if($data['group_id']) {
 				// user group
 				$update_user_group = array('group_id' => $data['group_id']);
@@ -355,14 +354,12 @@ class NodCMS_general_admin_model extends CI_Model
 		}
         else	//add
         {
-
             $this->db->insert('users',$data);
 			$id = $this->db->insert_id();
 			$group_data = array(
 				'user_id' => $id,
 				'group_id' => $data['group_id']
 			);
-
 			$group_data = $this->db->insert('user_group', $group_data);
         }
 		$this->db->trans_complete(); 

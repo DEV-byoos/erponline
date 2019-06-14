@@ -42,6 +42,8 @@ $lang['Reports'] = 'Rapports';
 $lang['Profile'] = 'Profile';
 $lang['Setting'] = 'Paramètres';
 $lang['Select Groups'] = 'Sélectionner le groupe';
+$lang['gender'] = 'Genre';
+// Origin
 $lang["site title"] = "titre du site";
 $lang["Site Description"] = "Description du site";
 $lang["site keywords"] = "mots-clés du site";

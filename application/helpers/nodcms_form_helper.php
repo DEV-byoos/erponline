@@ -264,6 +264,21 @@ function mk_hselect_faicon($name,$caption="",$options_data=null,$value=null){
     </div>
     <?php
 }
+function mk_hradio($name,$caption="",$options_data=null,$value=null){
+    ?>
+    <div class="form-group ">
+        <label for="<?=$name?>" class="control-label col-lg-2"><?=$caption?></label>
+			<div class="col-lg-10 col-sm-10">
+				<?php if($options_data!=null){ ?>
+				<?php foreach($options_data as $key=>$data){ ?>
+					<label for="<?=$key?>"><?=$key; ?></label>
+					<input type="radio" name="<?=$name; ?>" id="<?=$key; ?>"   value="<?=$data?>"  <?=($value!=null && $value==$data)?"checked":''?>>
+					<?php } ?>
+				<?php } ?>
+			</div>
+    </div>
+    <?php
+}
 function mk_hgoogle_location($name,$caption="",$value=""){
     $val = array("","","","");
     $data = explode(", ",$value);

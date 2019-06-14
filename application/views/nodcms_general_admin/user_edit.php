@@ -15,7 +15,6 @@
                 <div class=" form">
                     <?php
                     mk_hpostform($base_url.$page."_manipulate".(isset($data['user_id'])?"/".$data['user_id']:""));
-                    //mk_hselect('groups',$caption="Groups",$group_data,$field_id,$field_name='group_name',$value='group_id',$null_select='Select',$options='',$onselect=null,$translate=null)
 					mk_hselect("data[group_id]",_l('Goups',$this),$group_data,"group_id","group_name",isset($data['group_id'])?$data['group_id']:null,"<--"._l("use link",$this)."-->");
                     mk_hurl_upload("data[avatar]",_l('avatar',$this),isset($data['avatar'])?$data['avatar']:'',"avatar");
                     mk_htext("data[username]",_l('Username',$this),isset($data['username'])?$data['username']:'');
@@ -23,6 +22,7 @@
                     mk_htext("data[fullname]",_l('Full Name',$this),isset($data['fullname'])?$data['fullname']:'');
                     mk_hpassword("data[password]",_l('Password',$this));
                     mk_hcheckbox("data[status]",_l('status',$this),(isset($data['status']) && $data['status']==1)?1:null);
+					mk_hradio("data[gender]",_l('gender',$this),array( 'male'=>1,'female'=>2),isset($data['gender'])?$data['gender']:null);
                     mk_hsubmit(_l('Submit',$this),$base_url.$page,_l('Cancel',$this));
                     mk_closeform();
                     ?>

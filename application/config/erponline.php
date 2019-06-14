@@ -33,7 +33,7 @@ $config['version'] = array (
   "minor" => '05',
   "patch" => '0',
   
-  "build" => '2j', // build "j" date 2019/06/10  12:00  gbobard@gmail.com
+  "build" => '2j', // build "j" date 2019/06/13  18:00  gbobard@gmail.com
 );
 
 /*
