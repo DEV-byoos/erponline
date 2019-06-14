@@ -1,9 +1,9 @@
-## build to ERPonline version 2.0  BYOOS solutions  http://byoos.net
+## erponlineERP web-based by codeIgniter 3.1.10 and PHP 7.3  auth BCRYP build to ERPonline version 2.0  BYOOS solutions  http://byoos.net
 use  php 7.3 - auth  BCRYPT - codeIgniter 3.1.10 - rewrite  sessions - Mysqli - translate in French language
 gbobard@gmail.com   2019
 
 
-# [ERPonline](http://erponline.com) 
+# [ERPonline](http://byoos.net) 
 ERPonline – A Free E.R.P powered by CodeIgniter
 This free software comes from the fusion of several sources including NodCMS_v2, InvoicePlane, Stock_master_v2 and bian others in the future....
 Good use
@@ -12,11 +12,11 @@ Good use
 
 ERPonline+ is a free, Multi-Language, simple and powerful E.R.P powered by CodeIgniter.
 
-More information can be found at [erponline.com](http://erponline.com/).
+More information can be found at [erponline](http://byoos.net/).
 
-Frontend Demo: [demo.erponline.com](http://demo.erponline.com/)
+Frontend Demo: [demo.erponline](http://byoos.net/)
 
-Backend Demo: [demo.erponline.com/admin](http://demo.erponline.com/admin)
+Backend Demo: [demo.erponline/admin](http://byoos.net/admin)
 Username: demo
 Password: demo
 
