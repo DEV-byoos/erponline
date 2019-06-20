@@ -1,4 +1,4 @@
-## erponlineERP web-based by codeIgniter 3.1.10 and PHP 7.3  auth BCRYP build to ERPonline version 2.0  BYOOS solutions  http://byoos.net
+## erponlineERP web-based by codeIgniter 3.1.10 and PHP 7.3  auth BCRYPT build to ERPonline version 2.0  BYOOS solutions  http://byoos.net
 use  php 7.3 - auth  BCRYPT - codeIgniter 3.1.10 - rewrite  sessions - Mysqli - translate in French language
 gbobard@gmail.com   2019
 
