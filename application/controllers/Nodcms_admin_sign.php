@@ -87,47 +87,4 @@ class Nodcms_admin_sign extends MY_Controller {
 		$this->session->sess_destroy();
 		redirect('admin', 'refresh');
 	}
-	
-	// deprecated for ERPonline
-    function __login()
-    {
-        $username = $this->security->xss_clean($this->input->post('username'));
-        $password = $this->input->post('password');
-        $result= $this->NodCMS_admin_sign_model->resolve_user_login($username, $password);
-        if($result){
-			$tam=$result->result_array(); // modif BYOOS_modify
-		}
-        if($result && ($tam[0]['group_id']==1 || $tam[0]['group_id']==2))
-        {
-            foreach ($result->result_array() as $row)
-            {
-                $data = array(
-                    'fullname'  => $row['firstname']." ".$row['lastname'],
-                    'username'  => $row['username'],
-                    'user_id' => $row['user_id'],
-                    'group'   => $row['group_id'],
-                    'avatar'   => $row['avatar'],
-                    'email'   => $row['email'],
-                    'logged_in_status'   => true,
-
-                );
-            }
-            $this->session->set_userdata($data);
-            $this->session->set_userdata('Session_Admin', $data['user_id']);
-            redirect(base_url().'admin/');
-
-        }
-        else
-        {
-            $this->session->set_flashdata('message', _l('Oopsie, Username or password is incorrect',$this));
-            redirect(base_url().'admin-sign');
-        }
-    }
-// deprecated for ERPonline
-    function __logout()
-    {
-        //$this->session->sess_destroy();
-        $this->session->unset_userdata('logged_in_status');
-        redirect(base_url().'admin-sign');
-    }
 }

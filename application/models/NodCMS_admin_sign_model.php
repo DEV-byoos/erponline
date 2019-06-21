@@ -78,9 +78,8 @@ class NodCMS_admin_sign_model extends CI_Model
 		if ( $this->verify_password_hash($password, $hash) ){//Modif BYOOS_modify 
 			$this->db->where('username', $username);
 			$query = $this->db->get('users');
-			return $query;
 		}
-		//return  0;
+		return ($query) ? $query->result_array() : null;
 	}
 	
 	/**

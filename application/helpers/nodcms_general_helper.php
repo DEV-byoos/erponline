@@ -146,3 +146,18 @@ if ( ! function_exists('frontendStatisticCalc')){
 		return $mysession;
 	}
 }
+/**
+ * helpers is_countable compatibity PHP 7.x function.
+ * 
+ * @access public
+ * @param string code session
+ * @return  bool on success, false on failure
+ * added BYOOS 2019
+ */
+if (!function_exists('is_countable')) {
+
+    function is_countable($c) {
+        return is_array($c) || $c instanceof Countable;
+    }
+
+}
